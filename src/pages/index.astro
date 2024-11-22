@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-import CallToAction from "../components/CallToAction.astro";
 import SeeMoreBtn from "../components/SeeMoreBtn.astro";
 import Grid from "../components/Grid.astro";
 import Hero from "../components/Hero.astro";
@@ -10,17 +9,18 @@ import Pill from "../components/Pill.astro";
 import PortfolioPreview from "../components/PortfolioPreview.astro";
 import { Icon } from "astro-icon/components";
 import Skills from "../components/Skills.astro";
+import Aspirations from "../components/Aspirations.astro";
 
 const projects = (await getCollection("works"))
   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-  .slice(0, 8);
+  .slice(0, 3);
 ---
 
 <BaseLayout>
   <main class="wrapper top-wrapper">
     <Hero
       title="Hello, I'm Web Designer."
-      tagline="はじめまして、ご覧いただきありがとうございます。これまでの制作物や思考過程、今できること、これからやりたいことなどをまとめました。ご覧いただけますと幸いです。"
+      tagline="はじめまして、ご訪問くださりありがとうございます。これまでの制作物やできること、これからやりたいことをまとめました。ご覧いただけますと幸いです。"
     >
       <div class="roles"></div>
     </Hero>
@@ -36,7 +36,7 @@ const projects = (await getCollection("works"))
       </div>
 
       <div class="gallery">
-        <Grid variant="offset">
+        <ul class="top-grid">
           {
             projects.map((project) => (
               <li>
@@ -44,7 +44,7 @@ const projects = (await getCollection("works"))
               </li>
             ))
           }
-        </Grid>
+        </ul>
       </div>
     </section>
 
@@ -65,7 +65,7 @@ const projects = (await getCollection("works"))
           <span class="top-h2-description">これからやりたいこと</span>
         </div>
       </div>
-      <Skills />
+      <Aspirations />
     </section>
   </main>
 </BaseLayout>
@@ -81,6 +81,7 @@ const projects = (await getCollection("works"))
     justify-content: space-between;
     padding-bottom: var(--sp-1);
     border-bottom: solid 1px var(--color-gray01);
+    margin-bottom: var(--sp-3);
 
     @media screen and (max-width: 767px) {
       align-items: center;
@@ -111,7 +112,11 @@ const projects = (await getCollection("works"))
   }
 
   .gallery {
-    margin-top: var(--sp-3);
     grid-area: gallery;
   }
+	.top-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--sp-5) var(--sp-4);
+	}
 </style>

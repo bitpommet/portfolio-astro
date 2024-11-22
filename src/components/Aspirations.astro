@@ -1,0 +1,57 @@
+<div class="future-container">
+  <section class="future-box">
+    <h3 class="future-h3">なりたい姿</h3>
+    <p class="future-content">
+      コンテンツ制作やSEO、デザインの経験や知識を活かし、また新たな知識を学んで、お客様に合わせた最適なソリューションを提供できるWebマーケター・コンサルタントになりたいです。
+    </p>
+  </section>
+  <section class="future-box">
+    <h3 class="future-h3">これからできるようになりたいこと</h3>
+    <p class="future-content">
+      カメラで良い写真が撮れるようになりたいです。デザインにおいて、もちろん単体でも、写真の力は絶大だと思っています。写真を撮るために歩けば健康にもよいので、ぜひ練習したいです。
+    </p>
+  </section>
+  <section class="future-box">
+    <h3 class="future-h3">好きなもの</h3>
+    <p class="future-content">
+      梅干し, おにぎり, チョコレート, アコースティックギターの音色, コンポーネント, 馬 
+    </p>
+  </section>
+  <section class="future-box">
+    <h3 class="future-h3">元ライターがデザイナーを志した理由</h3>
+    <p class="future-content">
+      言語・非言語の表現、両方できるようになりたいと思ったからです。もとは文章を書くのが大好きだったのですが…文章って疲れているときは読めないなと感じることがありました。デザインなら、テキストだけでなく色や雰囲気、アイコン、アニメーションなどさまざまな方法で伝えることができます。きれいなものやかわいいものを見るのが好きなので、そういうものを自分で作れるところも魅力です。
+    </p>
+  </section>
+
+  <style>
+    .future-box {
+      display: flex;
+      padding: var(--sp-2) 0;
+
+			@media screen and (max-width: 767px) {
+				flex-direction: column;
+				gap: var(--sp-1);
+				padding: var(--sp-3) 0;
+    }
+	}
+
+    .future-box + .future-box {
+      border-top: 1px solid var(--color-gray02);
+    }
+
+    .future-h3 {
+      font-size: var(--fs-base);
+			color: var(--color-gray01);
+      width: 320px;
+      flex-shrink: 0;
+    }
+
+    .future-content {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-2);
+			font-size: var(--fs-sm);
+    }
+  </style>
+</div>

@@ -1,62 +1,111 @@
 ---
 import { Icon } from "astro-icon/components";
+import Pill from "./Pill.astro";
 ---
 
-<section class="box skills">
-	<div class="stack gap-2 lg:gap-4">
-		
-		<h3>デザイン関連</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		
-		<h3>Web制作</h3>
-		<p>Neque viverra justo nec ultrices dui. Est ultricies integer quis auctor elit.</p>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		
-		<h3>その他</h3>
-		<p>Urna porttitor rhoncus dolor purus non enim praesent ornare.</p>
-	</div>
-</section>
+<div class="skill-container">
+  <section class="skill-box">
+    <div class="skill-title">
+      <Icon name="solar:pallete-2-bold" width={64} height={64} />
+      <h3>デザイン関連</h3>
+    </div>
+    <ul class="skill-items">
+      <li class="skill-item">Webデザイン</li>
+      <li class="skill-item">LPデザイン</li>
+      <li class="skill-item">バナー</li>
+      <li class="skill-item">商品画像</li>
+      <li class="skill-item">ロゴデザイン</li>
+      <li class="skill-item">イラスト制作</li>
+      <li class="skill-item">動画編集</li>
+    </ul>
+    <div class="tags">
+      <Pill>Figma</Pill>
+      <Pill>Photoshop</Pill>
+      <Pill>Illustrator</Pill>
+      <Pill>Fresco</Pill>
+      <Pill>Premiere Pro</Pill>
+      <Pill>OCRツール</Pill>
+    </div>
+  </section>
+  <section class="skill-box">
+    <div class="skill-title">
+      <Icon name="mingcute:device-fill" width={64} height={64} />
+      <h3>Web制作</h3>
+    </div>
+    <ul class="skill-items">
+      <li class="skill-item">Webサイト制作</li>
+      <li class="skill-item">CMS構築</li>
+      <li class="skill-item">ノーコードサイト制作</li>
+    </ul>
+    <div class="tags">
+      <Pill>HTML</Pill>
+      <Pill>CSS</Pill>
+      <Pill>jQuery</Pill>
+      <Pill>Studio</Pill>
+      <Pill>WordPress</Pill>
+      <Pill>Astro</Pill>
+      <Pill>VSCode</Pill>
+      <Pill>GitHub</Pill>
+    </div>
+  </section>
+  <section class="skill-box">
+    <div class="skill-title">
+      <Icon name="solar:add-folder-bold" width={64} height={64} />
+      <h3>その他</h3>
+    </div>
+    <ul class="skill-items">
+      <li class="skill-item">Webライティング（SEO）</li>
+      <li class="skill-item">アクセス解析</li>
+      <li class="skill-item">データ整理・分析</li>
+      <li class="skill-item">スライド作成</li>
+    </ul>
+    <div class="tags">
+      <Pill>Word</Pill>
+      <Pill>Excel</Pill>
+      <Pill>PowerPoint</Pill>
+      <Pill>Tableau</Pill>
+      <Pill>Googleアナリティクス</Pill>
+      <Pill>Googleサーチコンソール</Pill>
+      <Pill>Googleキーワードプランナー</Pill>
+    </div>
+  </section>
+</div>
 
 <style>
-	.box {
-		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
-		padding: 1.5rem;
-		background-color: var(--gray-999_40);
-		box-shadow: var(--shadow-sm);
-	}
+  .skill-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-4);
 
-	.skills {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
-	}
+    @media screen and (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
 
-	.skills h2 {
-		font-size: var(--text-lg);
-	}
+  .skill-box {
+    display: flex;
+    flex-direction: column;
+  }
 
-	.skills p {
-		color: var(--gray-400);
-	}
+  .skill-title {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+    color: var(--color-gray01);
+  }
 
-	@media (min-width: 50em) {
-		.box {
-			border-radius: 1.5rem;
-			padding: 2.5rem;
-		}
+  .skill-items {
+    margin-top: var(--sp-2);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-xs) var(--sp-2);
+  }
 
-		.skills {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 5rem;
-		}
+  .skill-item {
+    font-size: var(--fs-sm);
+  }
 
-		.skills h2 {
-			font-size: var(--text-2xl);
-		}
+	.tags {
+		margin-top: var(--sp-1);
 	}
 </style>
