@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import PortfolioPreview from "../components/PortfolioPreview.astro";
+import Hero from "../components/Hero.astro";
+import Grid from "../components/Grid.astro";
+import { SITE_TITLE } from "../consts";
+
+const projects = (await getCollection("works")).sort(
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+---
+
+<BaseLayout
+  title="Works"
+  description="これまで制作したもののうち、公開可能なものをまとめています。"
+>
+  <main class="wrapper works-wrapper">
+    <Hero title="Works" tagline="これまで制作したものをまとめています。" />
+    <div class="gallery">
+      <Grid variant="offset">
+        {
+          projects.map((project) => (
+            <li>
+              <PortfolioPreview project={project} />
+            </li>
+          ))
+        }
+      </Grid>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+	.works-wrapper {
+		gap: var(--sp-5);
+	}
+</style>

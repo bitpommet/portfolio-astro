@@ -1,0 +1,62 @@
+---
+import { Icon } from "astro-icon/components";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<header class="header-menu">
+  <a href="/" class="header-title">
+    <h1 class="site-title">
+      {SITE_TITLE}
+    </h1>
+    <span class="site-description">
+      {SITE_DESCRIPTION}
+    </span>
+  </a>
+  <a href="https://github.com/bitpommet">
+    <Icon name="mdi:github" width={40} height={40} />
+  </a>
+</header>
+
+<style>
+  .header-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--sp-2) var(--sp-5);
+
+    @media screen and (max-width: 540px) {
+      padding: var(--sp-2);
+    }
+  }
+
+  .header-title {
+    display: flex;
+    align-items: baseline;
+    gap: var(--sp-2);
+    
+    @media screen and (max-width: 540px) {
+      flex-direction: column;
+      gap: var(--sp-xs);
+    }
+  }
+
+  .site-title {
+    font-family: var(--ff-en);
+    font-size: var(--fs-2xl);
+    font-weight: 400;
+    color: var(--color-gray01);
+    line-height: 1;
+  }
+
+  .site-description {
+    font-family: var(--ff-en);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: var(--color-gray01);
+    line-height: 1;
+  }
+
+  .header-nav .nav-items {
+    display: flex;
+  }
+</style>

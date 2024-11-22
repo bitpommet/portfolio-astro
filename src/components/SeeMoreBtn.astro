@@ -1,0 +1,33 @@
+---
+import { Icon } from "astro-icon/components";
+interface Props {
+	href: string;
+}
+
+const { href } = Astro.props;
+---
+
+  <a href={href}>
+		<slot />
+		<Icon name="mingcute:arrow-right-line" width={16} height={16} />
+	</a>
+
+<style>
+	a {
+		font-family: var(--ff-en);
+		font-weight: 600;
+		color: var(--color-text);
+		position: relative;
+		display: flex;
+		gap: var(--sp-2);
+		line-height: 1;
+		overflow: hidden;
+		white-space: nowrap;
+		transition: all 0.5s ease-out;
+	}
+
+	a:hover {
+		gap: var(--sp-1);
+		
+	}
+</style>
