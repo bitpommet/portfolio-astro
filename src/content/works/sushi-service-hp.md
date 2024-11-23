@@ -24,3 +24,5 @@ tags:
 ## ロゴデザインについて
 
 今回はサービスの立ち上げに付随するWebサイトデザインでしたので、ファビコンや名刺などにも使ってもらうことを想定しオリジナルのロゴを制作しました。職人の方は漫画『将太の寿司』がお好きとのことだったので、主人公の将太が修行する店の名前から鳥のイメージ、中央区の歴史から青海波の文様、熱い思いを表す太陽などのモチーフをまとめ、『SUSHI WIZARDS』の名にふさわしいロゴを作り上げました。
+
+[Figma](https://www.figma.com/design/Yri32R6sSSlupy0pCPfsbD/240903_SUSHI-WIZARDS_Competition?node-id=5-57916&t=TRgQLDyp2lZKKZUP-1)
