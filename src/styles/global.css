@@ -43,6 +43,9 @@
   --br-xs: 0.25rem;
   --br-1: 0.5rem;
   --br-full: 999px;
+
+  /* Box Shadow */
+  --bx-shadow : 0 0 15px -4px var(--color-gray01);
 }
 
 html,
