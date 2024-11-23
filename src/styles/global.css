@@ -107,8 +107,7 @@ h3 {
 }
 
 .wrapper {
-  display: flex;
-  justify-content: center;
+  display: flex;  
   flex-wrap: wrap;
   width: 100%;
   padding: var(--sp-5);
