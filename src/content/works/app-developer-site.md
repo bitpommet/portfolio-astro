@@ -1,23 +1,24 @@
 ---
 title: モバイルアプリ開発会社のコーポレートサイト
-publishDate: 2024-09
+publishDate: 2024-09-27
 img: /works/app-Mockup.jpg
-img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
+img_alt: モバイルアプリ開発会社のコーポレートサイトのモックアップ
 description: |
-  We paired with a cutting-edge music API and a team of horticulturalists
-  to build AI-generated playlists that maximize houseplant health.
+  スクールの課題で制作した、架空のモバイルアプリ開発会社のWebサイトです。
 tags:
+  - Webデザイン
   - Figma
   - Illustrator
-  - Webサイト制作
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.
+## デザイン全体
 
-Integer vitae nibh elit. Suspendisse eget urna eu neque bibendum pharetra. Sed interdum lectus sem, in pulvinar magna dignissim vel. Quisque maximus at urna nec laoreet. Suspendisse potenti. Vestibulum rhoncus sem ut mi pellentesque, in vestibulum erat blandit. Aliquam sodales dui ac maximus consectetur. Duis quis est vehicula, imperdiet nisl nec, fermentum erat. Duis tortor diam, pharetra eu euismod in, vehicula non eros. Curabitur facilisis dui at erat ultrices gravida. In at nunc ultricies, pulvinar mi vel, sagittis mauris. Praesent pharetra posuere purus ac imperdiet. Nulla facilisi.
+ターゲットが中小企業、ITスタートアップ、自治体・教育機関といった企業・団体のため、toBらしいかっちりしたデザインにしました。制作実績として紹介しているのがポップな印象のtoCアプリなので、業務用アプリらしいすっきりとシンプルな印象を公式サイトで出せればと考えました。
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
+## セクションごとのポイント
 
-Mauris sed eros in ex maximus volutpat. Suspendisse potenti. Donec lacinia justo consectetur sagittis tempor. Proin ullamcorper nisi vitae auctor rhoncus. Sed tristique aliquam augue. Pellentesque vitae fringilla ligula. Nulla arcu elit, efficitur eu nunc malesuada, eleifend tincidunt orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer mattis orci in bibendum ultricies. Quisque a dui erat. Phasellus et vulputate ipsum. Proin metus ex, lobortis nec ornare eget, bibendum ut sapien. Aliquam in dolor lobortis, aliquam tellus a, congue augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+### キャッチコピー
+現状をデジタルでよりよくする、ヒト・モノ・コトや既存のシステムと新しい技術をつなぐという意味を込めて「きょうとあしたをデジタルでつなぐ」というキャッチコピーを考えました。自社プロダクトの『OHA!』が、「朝起きれない人と起こす人をマッチングする」アプリのため、その印象を活かしたいとも思いました。
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
+### サービス紹介
+ターゲットとするクライアントが必ずしもITに詳しいとは限らないため、使用技術やフレームワークは詳しく記載せず、代わりに「何ができるか」「どのように進めていくか」を明示しました。中小企業のイメージで製造業や物流業の写真を使っているのは、業務でモバイルアプリを活発に使用するのがオフィスのほかに「現場」をもつ人だと考えたからです。（デスクワークの人は勤怠や在宅時に使うことが多く、そのようなアプリはすでに普及していると考えました）
