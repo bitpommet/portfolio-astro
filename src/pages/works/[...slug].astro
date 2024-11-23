@@ -60,9 +60,10 @@ const { Content } = await entry.render();
   .tags {
     display: flex;
     gap: var(--sp-1);
+    flex-wrap: wrap;
   }
 
   .description {
-    font-size: var(--fs-base);
+    overflow-wrap: anywhere;
   }
 </style>

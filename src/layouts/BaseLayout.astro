@@ -2,6 +2,7 @@
 import MainHead from '../components/MainHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import WorksLink from '../components/WorksLink.astro';
 
 interface Props {
 	title?: string | undefined;
@@ -18,26 +19,11 @@ const { title, description } = Astro.props;
 	<body>
 			<Header />
 			<slot />
+			<WorksLink />
 			<Footer />
 
 		<script>
-			// Add “loaded” class once the document has completely loaded.
 			addEventListener('load', () => document.documentElement.classList.add('loaded'));
 		</script>
-
-		<style>
-			/* These backgrounds are displayed below the fold, so we lazy load them
-			   once the `.loaded` class has been set.  */
-			:root.loaded {
-				--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-light-800w.jpg');
-				--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-light-800w.jpg');
-				--bg-image-footer: url('/assets/backgrounds/bg-footer-light-800w.jpg');
-			}
-			:root.loaded.theme-dark {
-				--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-dark-800w.jpg');
-				--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-dark-800w.jpg');
-				--bg-image-footer: url('/assets/backgrounds/bg-footer-dark-800w.jpg');
-			}
-		</style>
 	</body>
 </html>
