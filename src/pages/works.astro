@@ -1,10 +1,11 @@
 ---
 import { getCollection } from "astro:content";
 
+import Hero from "../components/Hero.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 import PortfolioPreview from "../components/PortfolioPreview.astro";
-import Hero from "../components/Hero.astro";
+
 import Grid from "../components/Grid.astro";
 
 const projects = (await getCollection("works")).sort(
@@ -33,7 +34,7 @@ const projects = (await getCollection("works")).sort(
 </BaseLayout>
 
 <style>
-	.works-wrapper {
-		gap: var(--sp-5);
-	}
+  .works-wrapper {
+    gap: var(--sp-5);
+  }
 </style>
