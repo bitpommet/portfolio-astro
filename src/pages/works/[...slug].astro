@@ -21,11 +21,16 @@ const { Content } = await entry.render();
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.description}>
-  <main class="wrapper project-wrapper">    
+  <main class="wrapper sub-wrapper"> 
     <h1 class="title">{entry.data.title}</h1>
     <p class="description">{entry.data.description}</p>
 		<div class="tags">
-      {entry.data.tags.map((t) => <Pill>{t}</Pill>)}
+      {entry.data.tags.map((t: unknown) => {
+        if (typeof t === 'string') {
+          return <Pill>{t}</Pill>;
+        }
+        return null;
+      })}
     </div>
     <div class="content">
       {
@@ -41,26 +46,23 @@ const { Content } = await entry.render();
 </BaseLayout>
 
 <style>
-  .project-wrapper {
-    max-width: 640px;
-		gap: var(--sp-2);
-		margin: var(--sp-5) ;
+  .sub-wrapper {
+    max-width: 720px;
+		gap: var(--sp-1);
+		margin: auto;
   }
 
 	.title {
 		line-height: 1.4;
+    font-weight: 700;
 	}
 
   .tags {
     display: flex;
-    gap: 0.5rem;
+    gap: var(--sp-1);
   }
 
   .description {
-    font-size: var(--text-lg);
-  }
-
-  .content {
-    width: 100%;
+    font-size: var(--fs-base);
   }
 </style>

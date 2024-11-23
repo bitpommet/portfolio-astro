@@ -3,11 +3,8 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 import SeeMoreBtn from "../components/SeeMoreBtn.astro";
-import Grid from "../components/Grid.astro";
 import Hero from "../components/Hero.astro";
-import Pill from "../components/Pill.astro";
 import PortfolioPreview from "../components/PortfolioPreview.astro";
-import { Icon } from "astro-icon/components";
 import Skills from "../components/Skills.astro";
 import Aspirations from "../components/Aspirations.astro";
 
@@ -72,7 +69,7 @@ const projects = (await getCollection("works"))
 
 <style>
   .top-wrapper {
-    gap: var(--sp-5);
+    gap: 5rem;
   }
 
   .section-header {
@@ -118,5 +115,9 @@ const projects = (await getCollection("works"))
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: var(--sp-5) var(--sp-4);
+
+    @media screen and (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
 	}
 </style>
