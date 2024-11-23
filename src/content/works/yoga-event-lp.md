@@ -7,12 +7,11 @@ description: |
   架空のヨガイベントのLPです。Figmaでデザイン、Studioで実装もおこないました。
 tags:
   - LPデザイン
+  - イラスト制作
   - Photoshop
   - Illustrator
   - Fresco
   - Figma
-  - LP制作
-  - イラスト制作
   - Studio
 ---
 
