@@ -4,30 +4,30 @@ import { Icon } from "astro-icon/components";
 
 
 <a href="/works/" class="works-btn">
-  <span class="works-btn-text">Works</span>
-  <Icon name="solar:gallery-wide-bold" width={24} height={24} />
+  <span class="works-btn-text">Works一覧</span>
+  <Icon name="solar:display-bold" width={28} height={28} />
 </a>
 
 <style>
   .works-btn {
     display: grid;
-    align-content: center;
+    gap: 2px;
     justify-items: center;
-    background-color: #FF5356;
+    align-content: center;
+    background-color: #417d3e;
     color: var(--color-bg);
     position: fixed;
     z-index: 1;
     bottom: var(--sp-2);
-    right: var(--sp-2);
+    right: var(--sp-xs);
     width: 5rem;
     height: 5rem;
     border-radius: var(--br-full);
-    box-shadow: 0 1px 4px var(--color-gray01);
+    box-shadow: 0 1px 5px var(--color-gray01);
   }
 
   .works-btn-text {
-    font-family: var(--ff-en);
-    font-size: var(--fs-xl);
-    
+    font-size: var(--fs-xs);
+    line-height: 1;
   }
 </style>
