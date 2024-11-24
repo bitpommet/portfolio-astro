@@ -48,7 +48,7 @@ const projects = (await getCollection("works"))
     <section id="skills">
       <div class="section-header">
         <div class="section-title">
-          <h2 class="top-h2">Skills and Expertise</h2>
+          <h2 class="top-h2">Skills & Expertise</h2>
           <span class="top-h2-description">できること</span>
         </div>
       </div>
@@ -98,6 +98,7 @@ const projects = (await getCollection("works"))
 
     @media screen and (max-width: 767px) {
       flex-direction: column;
+      align-items: flex-start;
       gap: var(--sp-xs);
     }
   }
@@ -117,6 +118,7 @@ const projects = (await getCollection("works"))
   .gallery {
     grid-area: gallery;
   }
+  
 	.top-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);

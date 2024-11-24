@@ -14,6 +14,7 @@ const { href } = Astro.props;
 
 <style>
 	a {
+		font-size: var(--fs-base);
 		font-family: var(--ff-en);
 		font-weight: 600;
 		color: var(--color-text);
@@ -24,6 +25,12 @@ const { href } = Astro.props;
 		overflow: hidden;
 		white-space: nowrap;
 		transition: all 0.5s ease-out;
+
+		@media screen and (max-width: 767px) {		
+			padding: var(--sp-2) var(--sp-2);
+			border: solid 1px var(--color-gray01);
+			border-radius: var(--br-full);
+		}
 	}
 
 	a:hover {
