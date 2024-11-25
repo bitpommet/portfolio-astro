@@ -83,11 +83,9 @@ const projects = (await getCollection("works"))
     justify-content: space-between;
     padding-bottom: var(--sp-1);
     border-bottom: solid 1px var(--color-gray01);
-    margin-bottom: var(--sp-3);
 
     @media screen and (max-width: 767px) {
       align-items: center;
-      margin-bottom: var(--sp-2);
     }
   }
 
@@ -118,6 +116,7 @@ const projects = (await getCollection("works"))
 
   .gallery {
     grid-area: gallery;
+    margin-top: var(--sp-3);
   }
   
 	.top-grid {

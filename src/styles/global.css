@@ -107,9 +107,8 @@ h3 {
 }
 
 .wrapper {
-  display: flex;  
-  flex-wrap: wrap;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
   padding: var(--sp-5) var(--sp-5) var(--sp-8);
 
   @media screen and (max-width: 540px) {

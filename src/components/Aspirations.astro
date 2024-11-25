@@ -42,14 +42,20 @@
 </div>
 
 <style>
+  .future-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
   .future-box {
     display: flex;
-    padding: var(--sp-2) 0;
+    padding: var(--sp-3) 0;
 
     @media screen and (max-width: 767px) {
       flex-direction: column;
+      flex-wrap: wrap;
       gap: var(--sp-1);
-      padding: var(--sp-2) 0;
     }
   }
 
@@ -63,6 +69,10 @@
     width: 320px;
     flex-shrink: 0;
     margin: 0;
+    
+    @media screen and (max-width: 767px) {
+      width: auto;
+    }
   }
 
   .future-content {
