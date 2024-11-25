@@ -1,7 +1,7 @@
 ---
 title: 企業紹介動画のサムネイル
 publishDate: 2024-05-22
-img: /works/240522_weekly.png
+img: /works/240522_weekly.webp
 img_alt: スーツ姿の若い男性が微笑むYoutube動画のサムネイル
 description: |
   スクールの課題で制作した、架空の企業紹介動画のサムネイルです。

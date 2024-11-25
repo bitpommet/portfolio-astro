@@ -99,11 +99,11 @@ h1 {
 }
 h2 {
   font-size: var(--fs-xl);
-  margin-top: var(--sp-1);
+  margin-top: var(--sp-2);
 }
 h3 {
   font-size: var(--fs-lg);
-  margin-top: var(--sp-xs);
+  margin-top: var(--sp-1);
 }
 
 .wrapper {
@@ -128,6 +128,7 @@ h3 {
   p a {
     display: inline-block;
     font-family: var(--ff-en);
+    font-size: var(--fs-base);
     color: var(--color-bg);
     padding: var(--sp-1) var(--sp-4);
     background-color: var(--color-gray01);
