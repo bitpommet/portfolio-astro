@@ -17,7 +17,6 @@ const { href } = Astro.props;
 		font-size: var(--fs-base);
 		font-family: var(--ff-en);
 		font-weight: 600;
-		color: var(--color-text);
 		position: relative;
 		display: flex;
 		gap: var(--sp-1);
@@ -26,7 +25,8 @@ const { href } = Astro.props;
 		white-space: nowrap;
 		transition: all 0.5s ease-out;
 
-		@media screen and (max-width: 767px) {		
+		@media screen and (max-width: 767px) {	
+			color: var(--color-gray01);	
 			padding: var(--sp-2) var(--sp-2);
 			border: solid 1px var(--color-gray01);
 			border-radius: var(--br-full);
