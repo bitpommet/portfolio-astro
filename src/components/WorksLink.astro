@@ -2,7 +2,6 @@
 import { Icon } from "astro-icon/components";
 ---
 
-
 <a href="/works/" class="works-btn">
   <span class="works-btn-text">Works一覧</span>
   <Icon name="solar:display-bold" width={32} height={32} />
@@ -15,7 +14,7 @@ import { Icon } from "astro-icon/components";
     justify-items: center;
     align-content: center;
     color: var(--color-main);
-    background-color: var(--color-mood);
+    background: linear-gradient(135deg, var(--color-bg), var(--color-gray02));
     border: 3px solid var(--color-main);
     position: fixed;
     z-index: 1;
@@ -25,10 +24,6 @@ import { Icon } from "astro-icon/components";
     height: 5rem;
     border-radius: var(--br-full);
     box-shadow: var(--bx-shadow);
-
-    &:hover {
-      background-color: var(--color-bg);
-    }
   }
 
   .works-btn-text {
