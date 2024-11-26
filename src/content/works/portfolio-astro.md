@@ -8,6 +8,7 @@ description: |
 tags:
   - Webデザイン
   - Figma
+  - Astro
 ---
 
 ## デザイン全体
