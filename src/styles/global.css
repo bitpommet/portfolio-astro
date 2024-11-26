@@ -45,7 +45,7 @@
   --br-full: 999px;
 
   /* Box Shadow */
-  --bx-shadow : 0 0 10px -4px var(--color-gray01);
+  --bx-shadow : 0 0 6px -2px var(--color-gray01);
 }
 
 html,
@@ -136,5 +136,9 @@ h3 {
     &:hover {
       background-color: var(--color-main);
     }
+  }
+
+  p img {
+    box-shadow: var(--bx-shadow);
   }
 }

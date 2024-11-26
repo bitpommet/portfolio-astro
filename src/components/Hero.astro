@@ -17,6 +17,7 @@ const { title, tagline } = Astro.props;
 	.hero {
 		display: flex;
 		flex-direction: column;
+		text-align: center;
 	}
 
 	.title,
@@ -42,5 +43,6 @@ const { title, tagline } = Astro.props;
 	.tagline {
 		margin-top: var(--sp-2);
 		font-size: var(--fs-sm);
+		white-space: pre-line;
 	}
 </style>
