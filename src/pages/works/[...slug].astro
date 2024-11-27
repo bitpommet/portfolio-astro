@@ -62,7 +62,7 @@ const { Content } = await entry.render();
     <nav class="works-nav">
       {
         prevEntry && (
-          <a href={`/works/${prevEntry.slug}`}>
+          <a href={`/works/${prevEntry.slug}`} class="works-prev">
             <Icon name="solar:arrow-left-linear" width={16} height={16} />
             {prevEntry.data.title}
           </a>
@@ -70,7 +70,7 @@ const { Content } = await entry.render();
       }
       {
         nextEntry && (
-          <a href={`/works/${nextEntry.slug}`}>
+          <a href={`/works/${nextEntry.slug}`} class="works-next">
             {nextEntry.data.title}
             <Icon name="solar:arrow-right-linear" width={16} height={16} />
           </a>
@@ -133,14 +133,14 @@ const { Content } = await entry.render();
       &:hover {
         color: var(--color-main);
       }
-
-      &:first-of-type {
-        justify-content: flex-start;
-      }
-
-      &:last-of-type {
-        justify-content: flex-end;
-      }
     }
+  }
+
+  .works-prev {
+    justify-content: flex-start;
+  }
+
+  .works-next {
+    justify-content: flex-end;
   }
 </style>
