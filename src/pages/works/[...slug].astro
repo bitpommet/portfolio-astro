@@ -63,16 +63,16 @@ const { Content } = await entry.render();
       {
         prevEntry && (
           <a href={`/works/${prevEntry.slug}`} class="works-prev">
-            <Icon name="solar:arrow-left-linear" width={16} height={16} />
             {prevEntry.data.title}
+            <Icon name="solar:arrow-right-linear" width={16} height={16} />
           </a>
         )
       }
       {
         nextEntry && (
           <a href={`/works/${nextEntry.slug}`} class="works-next">
+            <Icon name="solar:arrow-left-linear" width={16} height={16} />
             {nextEntry.data.title}
-            <Icon name="solar:arrow-right-linear" width={16} height={16} />
           </a>
         )
       }
@@ -114,8 +114,9 @@ const { Content } = await entry.render();
   }
 
   .works-nav {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
     gap: var(--sp-2);
     margin-top: var(--sp-5);
     border-bottom: 1px solid var(--color-gray02);
@@ -129,6 +130,7 @@ const { Content } = await entry.render();
       font-weight: 500;
       line-height: 1.4;
       color: var(--color-gray01);
+      flex: 1;
 
       &:hover {
         color: var(--color-main);
@@ -137,10 +139,10 @@ const { Content } = await entry.render();
   }
 
   .works-prev {
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
 
   .works-next {
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 </style>
