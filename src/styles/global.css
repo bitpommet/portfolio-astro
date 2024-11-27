@@ -113,11 +113,21 @@ h3 {
 .wrapper {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
   padding: var(--sp-5) var(--sp-5) var(--sp-8);
 
   @media screen and (max-width: 540px) {
-    padding: var(--sp-6) var(--sp-2);
+    padding: var(--sp-5) var(--sp-2);
   }
+}
+
+.sub-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 720px;
+  gap: var(--sp-1);
+  margin: auto;
 }
 
 .content {
@@ -145,5 +155,9 @@ h3 {
   p img {
     border: 1px solid var(--color-gray02);
     margin-top: var(--sp-2);
+  }
+
+  .title {
+    line-height: 1.4;
   }
 }

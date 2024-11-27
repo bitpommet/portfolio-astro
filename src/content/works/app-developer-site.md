@@ -9,6 +9,7 @@ tags:
   - Webデザイン
   - Figma
   - Illustrator
+category: スクール課題
 ---
 
 ## デザイン全体

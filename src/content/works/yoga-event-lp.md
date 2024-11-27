@@ -13,6 +13,7 @@ tags:
   - Fresco
   - Figma
   - Studio
+category: スクール課題
 ---
 
 ## デザイン全体

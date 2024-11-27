@@ -8,6 +8,7 @@ description: |
 tags:
   - Youtubeサムネイル
   - Photoshop
+category: スクール課題
 ---
 
 ## デザインについて

@@ -18,8 +18,7 @@ const projects = (await getCollection("works"))
     <Hero
       title="Hello, I'm Web Designer."
       tagline="はじめまして、ご訪問くださりありがとうございます。\nこれまでの制作物やできること、これからやりたいことをまとめました。\nご覧いただけますと幸いです。"
-    >
-    </Hero>
+    />
 
     <section id="works">
       <div class="section-header">
@@ -72,7 +71,7 @@ const projects = (await getCollection("works"))
     gap: var(--sp-8);
 
     @media screen and (max-width: 767px) {
-      gap: var(--sp-6);     
+      gap: var(--sp-6);
     }
   }
 
@@ -117,14 +116,18 @@ const projects = (await getCollection("works"))
     grid-area: gallery;
     margin-top: var(--sp-3);
   }
-  
-	.top-grid {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: var(--sp-5) var(--sp-4);
+
+  .top-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-5) var(--sp-4);
 
     @media screen and (max-width: 767px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: 540px) {
       grid-template-columns: 1fr;
     }
-	}
+  }
 </style>

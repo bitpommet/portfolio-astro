@@ -6,7 +6,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   title="プライバシーポリシー"
   description="当サイトの取り扱う個人情報について"
 >
-  <main class="wrapper sub-wrapper">
+  <main class="wrapper">
+    <article class="sub-wrapper">
       <h1 class="title">プライバシーポリシー</h1>
       <p class="description">当サイトにおける個人情報等の取り扱いについて</p>
       <section>
@@ -58,18 +59,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           本プライバシーポリシーの内容は、必要に応じて変更される可能性があります。重要な変更がある場合は、当サイト上でお知らせします。
         </p>
       </section>
+    </article>
   </main>
 </BaseLayout>
 
 <style>
-  .sub-wrapper {
-    display: flex;
-    flex-direction: column;
-    max-width: 720px;
-    gap: var(--sp-1);
-    margin: auto;
-  }
-
   .title {
     line-height: 1.4;
   }

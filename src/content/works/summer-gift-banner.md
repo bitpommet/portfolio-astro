@@ -9,6 +9,7 @@ tags:
   - バナー
   - Photoshop
   - Illustrator
+category: スクール課題
 ---
 
 ## デザインについて

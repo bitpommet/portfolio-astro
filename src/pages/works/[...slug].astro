@@ -35,29 +35,32 @@ const { Content } = await entry.render();
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.description}>
-  <main class="wrapper sub-wrapper">
-    <h1 class="title">{entry.data.title}</h1>
-    <p class="description">{entry.data.description}</p>
-    <div class="tags">
-      {
-        entry.data.tags.map((t: unknown) => {
-          if (typeof t === "string") {
-            return <Pill>{t}</Pill>;
-          }
-          return null;
-        })
-      }
-    </div>
-    <div class="content">
-      {
-        entry.data.img && (
-          <img src={entry.data.img} alt={entry.data.img_alt || ""} />
-        )
-      }
-      <div class="content">
-        <Content />
+  <main class="wrapper">
+    <article class="sub-wrapper">
+      <span class="category">{entry.data.category}</span>
+      <h1 class="title">{entry.data.title}</h1>
+      <p class="description">{entry.data.description}</p>      
+      <div class="tags">
+        {
+          entry.data.tags.map((t: unknown) => {
+            if (typeof t === "string") {
+              return <Pill>{t}</Pill>;
+            }
+            return null;
+          })
+        }
       </div>
-    </div>
+      <div class="content">
+        {
+          entry.data.img && (
+            <img src={entry.data.img} alt={entry.data.img_alt || ""} />
+          )
+        }
+        <div class="content">
+          <Content />
+        </div>
+      </div>
+    </article>
 
     <nav class="works-nav">
       {
@@ -81,16 +84,18 @@ const { Content } = await entry.render();
 </BaseLayout>
 
 <style>
-  .sub-wrapper {
-    display: flex;
-    flex-direction: column;
-    max-width: 720px;
-    gap: var(--sp-1);
-    margin: auto;
+  .category {
+    color: var(--color-main);
+    font-size: var(--fs-xs);
+    background-color: var(--color-bg);
+    padding: var(--sp-xs) 12px var(--sp-xs) var(--sp-1);
+    border-radius: 0 16px 16px 0;
+    border: 1px solid var(--color-gray02);
+    width: fit-content;
+    font-weight: 500;
   }
 
   .title {
-    line-height: 1.4;
     font-weight: 700;
   }
 
@@ -114,26 +119,31 @@ const { Content } = await entry.render();
   }
 
   .works-nav {
+    max-width: 720px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     flex-direction: row-reverse;
     gap: var(--sp-2);
-    margin-top: var(--sp-5);
+    margin-top: var(--sp-6);
     border-bottom: 1px solid var(--color-gray02);
+    padding-bottom: var(--sp-2);
 
     a {
       display: flex;
       gap: var(--sp-xs);
       align-items: center;
-      padding-bottom: var(--sp-2);
-      font-size: var(--fs-xs);
-      font-weight: 500;
+      font-weight: 600;
       line-height: 1.4;
       color: var(--color-gray01);
       flex: 1;
 
       &:hover {
         color: var(--color-main);
+      }
+
+      @media screen and (max-width: 540px) {
+        font-size: var(--fs-xs);
       }
     }
   }

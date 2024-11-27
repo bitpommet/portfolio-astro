@@ -9,6 +9,7 @@ tags:
   - Webデザイン
   - Figma
   - Astro
+category: 個人制作
 ---
 
 ## デザイン全体

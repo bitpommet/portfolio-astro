@@ -8,6 +8,7 @@ description: |
 tags:
   - バナー
   - Figma
+category: スクール課題
 ---
 
 ## デザインについて

@@ -11,6 +11,8 @@ const { data, slug } = Astro.props.project;
 
 <a class="card" href={`/works/${slug}`}>
   <span class="title">{data.title}</span>
+  <span class="category">{data.category}</span>
+
   <img
     src={data.img}
     alt={data.img_alt || ""}
@@ -19,20 +21,40 @@ const { data, slug } = Astro.props.project;
   />
 </a>
 <div class="tags">
-  {data.tags.map((t: unknown) => {
-    if (typeof t === 'string') {
-      return <Pill>{t}</Pill>;
-    }
-    return null;
-  })}
+  {
+    data.tags.map((t: unknown) => {
+      if (typeof t === "string") {
+        return <Pill>{t}</Pill>;
+      }
+      return null;
+    })
+  }
 </div>
 
 <style>
   .card {
     display: flex;
     flex-direction: column-reverse;
-    justify-content: center;
-    align-items: flex-start;
+    position: relative;
+  }
+
+  .category {
+    font-size: var(--fs-xs);
+    position: absolute;
+    z-index: 1;
+    top: var(--sp-xs);
+    left: -4px;
+    padding: 1px var(--sp-1) 1px var(--sp-xs);
+    background: linear-gradient(
+      135deg,
+      rgba(255 255 255 / 0.6),
+      rgba(255 255 255 / 0.8)
+    );
+    backdrop-filter: blur(32px);
+    border: 1px solid var(--color-gray02);
+    border-radius: 0 16px 16px 0;
+    color: var(--color-main);
+    font-weight: 500;
   }
 
   .title {
@@ -49,10 +71,10 @@ const { data, slug } = Astro.props.project;
     height: 100%;
     object-fit: cover;
     box-shadow: var(--bx-shadow);
+  }
 
-    &:hover {
-      opacity: 0.7;
-    }
+  .card:hover img {
+    opacity: 0.7;
   }
 
   .tags {

@@ -9,6 +9,7 @@ tags:
   - Youtubeサムネイル
   - Figma
   - Photoshop
+category: スクール課題
 ---
 
 ## デザインについて

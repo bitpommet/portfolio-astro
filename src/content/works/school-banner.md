@@ -8,6 +8,7 @@ description: |
 tags:
   - バナー
   - Photoshop
+category: スクール課題
 ---
 
 ## デザインについて
