@@ -114,8 +114,8 @@ const { Content } = await entry.render();
   }
 
   .works-nav {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--sp-2);
     margin-top: var(--sp-4);
     border-bottom: 1px solid var(--color-gray02);
@@ -131,6 +131,14 @@ const { Content } = await entry.render();
 
       &:hover {
         color: var(--color-main);
+      }
+
+      &:first-of-type {
+        justify-content: flex-start;
+      }
+
+      &:last-of-type {
+        justify-content: flex-end;
       }
     }
   }
