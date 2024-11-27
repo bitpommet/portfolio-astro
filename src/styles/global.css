@@ -95,7 +95,11 @@ ul {
 }
 
 h1 {
-  font-size: var(--fs-2xl);
+  font-size: var(--fs-3xl);
+
+  @media screen and (max-width: 767px) {
+    font-size: var(--fs-2xl);    
+  }
 }
 h2 {
   font-size: var(--fs-xl);
@@ -112,7 +116,7 @@ h3 {
   padding: var(--sp-5) var(--sp-5) var(--sp-8);
 
   @media screen and (max-width: 540px) {
-    padding: var(--sp-4) var(--sp-2);
+    padding: var(--sp-6) var(--sp-2);
   }
 }
 
