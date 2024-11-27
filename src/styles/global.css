@@ -103,7 +103,7 @@ h1 {
 }
 h2 {
   font-size: var(--fs-xl);
-  margin-top: var(--sp-2);
+  margin-top: var(--sp-1);
 }
 h3 {
   font-size: var(--fs-lg);
