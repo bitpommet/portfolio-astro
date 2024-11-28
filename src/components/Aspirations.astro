@@ -35,7 +35,7 @@
     <div class="future-content">
       <span>
         音楽・映画・ドラマ・絵画・写真等の鑑賞, ゲーム, 散歩, 読書, 梅干し,
-        おにぎり, チョコレート, スパイスやハーブ, アコースティックギターの音色,
+        おにぎり, チョコレート, 薬味・スパイス・ハーブ, アコースティックギターの音色,
         コンポーネント, 薔薇, 馬, 春と秋
       </span>
     </div>
@@ -43,18 +43,14 @@
 </div>
 
 <style>
-  .future-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 100%;
-  }
-
   .future-box {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     padding: var(--sp-3) 0;
+    gap: var(--sp-4);
 
     @media screen and (max-width: 767px) {
-      flex-direction: column;
+      grid-template-columns: 1fr;
       flex-wrap: wrap;
       gap: var(--sp-1);
     }
@@ -66,13 +62,7 @@
 
   .future-h3 {
     color: var(--color-gray01);
-    width: 320px;
-    flex-shrink: 0;
     margin: 0;
-
-    @media screen and (max-width: 767px) {
-      width: auto;
-    }
   }
 
   .future-content {
