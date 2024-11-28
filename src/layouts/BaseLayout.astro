@@ -1,29 +1,30 @@
 ---
-import MainHead from '../components/MainHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import WorksLink from '../components/WorksLink.astro';
-
-interface Props {
-	title?: string | undefined;
-	description?: string | undefined;
-}
+import MainHead from "../components/MainHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import WorksLink from "../components/WorksLink.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 const { title, description } = Astro.props;
+const pageTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
+const pageDescription = description || SITE_DESCRIPTION;
 ---
 
 <html lang="ja">
 	<head>
-		<MainHead title={title} description={description} />
+		<MainHead title={pageTitle} description={pageDescription} />
 	</head>
-	<body>
-			<Header />
-			<slot />
-			<WorksLink />
-			<Footer />
+  
+  <body>
+    <Header />
+    <slot />
+    <WorksLink />
+    <Footer />
 
-		<script>
-			addEventListener('load', () => document.documentElement.classList.add('loaded'));
-		</script>
-	</body>
+    <script>
+      addEventListener("load", () =>
+        document.documentElement.classList.add("loaded")
+      );
+    </script>
+  </body>
 </html>
