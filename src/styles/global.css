@@ -19,14 +19,9 @@
   --fs-5xl: 4rem; /* 64px */
 
   /* Font Family */
-  --ff-system: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  --ff-body: "Noto Sans JP", var(--ff-system);
-  --ff-en: "Afacad", var(--ff-system);
+  --ff-body: "Noto Sans JP", sans-serif;
+  --ff-en: "Afacad", sans-serif;
   --ff-title: "Sedan", serif;
-
-  /* Transitions */
-  --theme-transition: 0.3s ease-in-out;
 
   /* Spacing */
   --sp-xs: 0.25rem; /* 4px */
