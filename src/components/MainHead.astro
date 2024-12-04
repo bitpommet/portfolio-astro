@@ -10,7 +10,7 @@ interface Props {
 
 const { title, description } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const { image = "/works/ogp.webp" } = Astro.props;
+const { image = "/ogp.webp" } = Astro.props;
 ---
 
 <meta charset="UTF-8" />
@@ -20,13 +20,6 @@ const { image = "/works/ogp.webp" } = Astro.props;
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="icon" href="/favicon.ico" />
-
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Noto+Sans+JP:wght@400..700&family=Sedan:ital@0;1&display=swap"
-  rel="stylesheet"
-/>
 
 <title>{title}</title>
 <meta name="title" content={title} />
