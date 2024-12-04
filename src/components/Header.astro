@@ -23,11 +23,15 @@ const links = [
 
 <style>
   .header-menu {
-    background-color: var(--color-bg);
+    position: sticky;
+    top: 0;
+    background-color: rgb(255 255 255 / .75);
+    border-bottom: solid 1px var(--color-bg);
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     padding: var(--sp-2) var(--sp-5);
+    z-index: 10;
 
     @media screen and (max-width: 540px) {
       padding: var(--sp-2);
@@ -68,6 +72,4 @@ const links = [
       color: var(--color-main);
     }
   }
-
-  
 </style>
