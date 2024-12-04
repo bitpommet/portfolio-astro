@@ -1,6 +1,10 @@
 ---
-import { Icon } from "astro-icon/components";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import NavItem from "./NavItem.astro";
+
+const links = [
+  { href: "/works", text: "Works" },
+];
 ---
 
 <header class="header-menu">
@@ -12,16 +16,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
       {SITE_DESCRIPTION}
     </span>
   </a>
-  <div class="header-links">
-  <a href="/works/" class="header-link">
-    Works
-    <Icon name="solar:display-bold" width={40} height={40} />
-  </a>
-  <a href="https://github.com/bitpommet" class="header-link">
-    GitHub
-    <Icon name="mdi:github" width={40} height={40} />
-  </a>
-</div>
+  <ul class="nav-items">
+    {links.map((link) => <NavItem {...link} />)}
+  </ul>
 </header>
 
 <style>
@@ -29,7 +26,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     background-color: var(--color-bg);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     padding: var(--sp-2) var(--sp-5);
 
     @media screen and (max-width: 540px) {
@@ -72,18 +69,5 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     }
   }
 
-  .header-links {
-    display: flex;
-    gap: var(--sp-2);
-  }
-
-  .header-link {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    font-size: var(--fs-xs);
-    font-family: var(--ff-en);
-    color: var(--color-gray01);
-    line-height: 1.1; 
-  }
+  
 </style>

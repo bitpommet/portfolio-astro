@@ -1,0 +1,36 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  href: string;
+  text: string;
+  icon: string;
+  isActive?: boolean;
+}
+
+const { href, text, icon, isActive } = Astro.props;
+---
+
+<li class={`slink-item ${isActive ? "active" : ""}`}>
+  <a href={href} class="social-link">
+    {text}
+    <Icon name={icon} width={40} height={40} />
+  </a>
+</li>
+
+<style>
+  .social-link {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2px;
+    align-items: center;
+    font-size: var(--fs-xs);
+    font-family: var(--ff-en);
+    color: var(--color-gray01);
+    line-height: 1.1;
+
+    &:hover {
+      color: var(--color-main);
+    }
+  }
+</style>

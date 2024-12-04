@@ -1,40 +1,54 @@
 ---
-import { Icon } from "astro-icon/components";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { SITE_TITLE } from "../consts";
 import NavItem from "./NavItem.astro";
+import SocialLinks from "./SocialLinks.astro";
 
 const links = [
   { href: "/", text: "Home" },
   { href: "/works", text: "Works" },
 ];
+const slinks = [
+  {
+    href: "https://x.com/waterhituji",
+    text: "X(旧Twitter)",
+    icon: "mingcute:social-x-line",
+  },
+  {
+    href: "https://github.com/bitpommet",
+    text: "GitHub",
+    icon: "mingcute:github-fill",
+  },
+];
 ---
 
 <footer>
-  <div class="internal-links">
+  <div class="footer-links">
     <ul class="nav-items">
       {links.map((link) => <NavItem {...link} />)}
     </ul>
-    <a href="/privacy-policy" class="footer-link">プライバシーポリシー</a>
+    <a href="/privacy-policy" class="privacy-policy">プライバシーポリシー</a>
   </div>
-
+  <ul class="social-links">
+    {slinks.map((link) => <SocialLinks {...link} />)}
+  </ul>
   <p class="cr">&copy; 2024 {SITE_TITLE}</p>
 </footer>
 
 <style>
   footer {
     width: 100%;
-    padding: var(--sp-3) var(--sp-5);
+    padding: var(--sp-2) var(--sp-5) var(--sp-1);
     background-color: var(--color-mood);
     display: flex;
     flex-direction: column;
     align-items: center;
 
     @media screen and (max-width: 540px) {
-      padding: var(--sp-2);
+      padding: var(--sp-2) var(--sp-2) var(--sp-1);
     }
   }
 
-  .internal-links {
+  .footer-links {
     width: 100%;
     display: flex;
     align-items: baseline;
@@ -45,15 +59,21 @@ const links = [
     display: flex;
   }
 
-  .footer-link {
+  .social-links {
+    margin-top: var(--sp-2);
+    display: flex;
+    gap: var(--sp-2);
+  }
+
+  .privacy-policy {
     font-size: var(--fs-xs);
   }
 
   .cr {
-    margin-top: var(--sp-2);
     font-family: var(--ff-en);
     font-size: var(--fs-sm);
     color: var(--color-gray01);
     letter-spacing: 0.02em;
+    margin-top: var(--sp-3);
   }
 </style>
