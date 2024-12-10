@@ -72,4 +72,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 		margin-bottom: var(--sp-2);
     overflow-wrap: anywhere;
   }
+
+  ul {
+    margin-top: var(--sp-xs);
+  }
+
+  li {
+    list-style-position: inside;
+
+    &::marker {
+      content: "- ";
+    }
+  }
 </style>
