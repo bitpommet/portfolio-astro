@@ -10,6 +10,9 @@ tags:
   - Figma
   - Illustrator
 category: スクール課題
+externalLinks: 
+  - url: https://www.figma.com/design/PoEaQuozlxp5uAz3WiW02D/App-Developer-Revised?node-id=2008-149&t=9XnGrMyEh6PLIb7Z-1
+    text: Figma
 ---
 
 ## デザイン全体
@@ -33,7 +36,3 @@ category: スクール課題
 ![モバイルアプリ開発会社Webサイトのパソコン版イメージ](../../../public/works/app-pc.webp)
 
 ![モバイルアプリ開発会社Webサイトのスマートフォン版イメージ](../../../public/works/app-sp.webp)
-
-## リンク
-
-[Figma](https://www.figma.com/design/PoEaQuozlxp5uAz3WiW02D/App-Developer-Revised?node-id=2008-149&t=9XnGrMyEh6PLIb7Z-1)

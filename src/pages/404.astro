@@ -12,12 +12,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       title="Not Found"
       tagline="お探しのページは見つかりませんでした。\nページが移動、または削除された可能性があります。"
     />
+    <a href="/" class="to-top-btn">
+      ホームにもどる
+    </a>
   </main>
 </BaseLayout>
 
 <style>
   .notfound-wrapper {
-    height: 100vh;
     text-align: center;
+    height: 70vh;
+  }
+
+  .to-top-btn {
+    margin-top: var(--sp-6);
+    padding: var(--sp-2) var(--sp-4);
+    border: solid 1px;
+    border-radius: var(--br-full);
   }
 </style>

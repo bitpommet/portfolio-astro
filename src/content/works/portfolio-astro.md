@@ -10,6 +10,9 @@ tags:
   - Figma
   - Astro
 category: 個人制作
+externalLinks: 
+  - url: https://github.com/bitpommet/portfolio-astro
+    text: GitHub
 ---
 
 ## デザイン全体
@@ -18,10 +21,6 @@ category: 個人制作
 
 Figmaでデザインカンプを作りましたが、実装しながら調整した部分もあるため出来上がったものとは違っているところもあります。
 
-急いでいたこともあり、1からの構築ではなくAstro公式のスターターキットを使いましたが、Next.js×microCMSの本を少し読んでいたこともありあまり迷わず作ることができました。
+急いでいたこともあり1からの構築ではなく[Astro公式のスターターキット](https://github.com/withastro/astro/tree/main/examples/portfolio)を使いましたが、[Next.js×microCMSの本](https://amzn.asia/d/hmrhh4A)を少し読んでいたことであまり迷わず作ることができました。
 
 ![ポートフォリオのパソコン版イメージ](../../../public/works/pf-pc.webp)
-
-## リンク
-
-[GitHub](https://github.com/bitpommet/portfolio-astro)

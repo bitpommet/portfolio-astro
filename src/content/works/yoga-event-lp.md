@@ -14,6 +14,11 @@ tags:
   - Figma
   - Studio
 category: スクール課題
+externalLinks: 
+  - url: https://www.figma.com/design/bSstltWnkgRDQziXEtZhgL/YOGAinCITYFESTIVAL_Revised?node-id=0-1&t=mbxRURfSFKeA9JEK-1
+    text: Figma
+  - url: https://yogalp-mizuiro.studio.site/
+    text: Studio
 ---
 
 ## デザイン全体
@@ -41,8 +46,3 @@ category: スクール課題
 ![ヨガイベントLPのパソコン版イメージ](../../../public/works/yoga-pc.webp)
 
 ![ヨガイベントLPのスマートフォン版イメージ](../../../public/works/yoga-sp.webp)
-
-## リンク
-
-[Figma](https://www.figma.com/design/bSstltWnkgRDQziXEtZhgL/YOGAinCITYFESTIVAL_Revised?node-id=0-1&t=mbxRURfSFKeA9JEK-1)
-[Studio](https://yogalp-mizuiro.studio.site/)

@@ -5,6 +5,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Pill from "../../components/Pill.astro";
 import { Icon } from "astro-icon/components";
 
+interface ExternalLink {
+  url: string;
+  text?: string;
+}
+
 interface Props {
   entry: CollectionEntry<"works">;
   prevEntry?: CollectionEntry<"works">;
@@ -39,7 +44,7 @@ const { Content } = await entry.render();
     <article class="sub-wrapper">
       <span class="category">{entry.data.category}</span>
       <h1 class="title">{entry.data.title}</h1>
-      <p class="description">{entry.data.description}</p>      
+      <p class="description">{entry.data.description}</p>
       <div class="tags">
         {
           entry.data.tags.map((t: unknown) => {
@@ -50,15 +55,31 @@ const { Content } = await entry.render();
           })
         }
       </div>
+      {
+        entry.data.img && (
+          <img
+            src={entry.data.img}
+            alt={entry.data.img_alt || ""}
+            class="works-main-image"
+          />
+        )
+      }
       <div class="content">
+        <Content />
+      </div>
+      <div class="works-links">       
         {
-          entry.data.img && (
-            <img src={entry.data.img} alt={entry.data.img_alt || ""} />
+          entry.data.externalLinks && entry.data.externalLinks.length > 0 && (
+          <h2 class="works-link-title">リンク</h2>
+            <div class="external-links">
+              {entry.data.externalLinks.map((link: ExternalLink) => (
+                <a href={link.url} target="_blank" class="external-link">
+                  {link.text || link.url}
+                </a>
+              ))}
+            </div>
           )
         }
-        <div class="content">
-          <Content />
-        </div>
       </div>
     </article>
 
@@ -84,6 +105,14 @@ const { Content } = await entry.render();
 </BaseLayout>
 
 <style>
+  .title {
+    font-weight: 700;
+  }
+
+  .description {
+    overflow-wrap: anywhere;
+  }
+
   .category {
     color: var(--color-main);
     font-size: var(--fs-xs);
@@ -95,8 +124,25 @@ const { Content } = await entry.render();
     font-weight: 500;
   }
 
-  .title {
-    font-weight: 700;
+  img {
+    border: 1px solid var(--color-gray02);
+    margin-top: var(--sp-2);
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+
+    p a {
+      border-bottom: solid 1px;
+    }
+
+    p img {
+      border: 1px solid var(--color-gray02);
+      margin-top: var(--sp-2);
+    }
   }
 
   .tags {
@@ -105,29 +151,43 @@ const { Content } = await entry.render();
     flex-wrap: wrap;
   }
 
-  .description {
-    overflow-wrap: anywhere;
+  .works-link-title {
+    color: var(--color-gray01);
   }
 
-  h2,
-  h3 {
-    line-height: 1.4;
+  .external-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-1);
+    margin-top: var(--sp-1);
   }
 
-  img {
-    border: 1px solid var(--color-gray02);
+  .external-link {
+    display: inline-block;
+    font-family: var(--ff-en);
+    font-size: var(--fs-base);
+    font-weight: 600;
+    color: var(--color-gray01);
+    padding: var(--sp-1) var(--sp-3);
+    border: 1px solid;
+    border-radius: var(--br-full);
+
+    &:hover {
+      color: var(--color-bg);
+      background-color: var(--color-main);
+    }
   }
 
   .works-nav {
     max-width: 720px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: stretch;
     flex-direction: row-reverse;
     gap: var(--sp-2);
-    margin-top: var(--sp-6);
+    margin-top: var(--sp-5);
     border-bottom: 1px solid var(--color-gray02);
-    padding-bottom: var(--sp-2);
+    padding-bottom: var(--sp-1);
 
     a {
       display: flex;

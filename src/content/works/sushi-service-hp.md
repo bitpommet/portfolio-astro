@@ -13,6 +13,9 @@ tags:
   - Illustrator
   - Figma
 category: 実案件
+externalLinks: 
+  - url: https://www.figma.com/design/Yri32R6sSSlupy0pCPfsbD/240903_SUSHI-WIZARDS_Competition?node-id=5-57916&t=TRgQLDyp2lZKKZUP-1
+    text: Figma
 ---
 
 ## デザイン全体
@@ -34,7 +37,3 @@ category: 実案件
 ![出張寿司Webサイトのトップページイメージ](../../../public/works/sushi-top-page.webp)
 
 ![出張寿司Webサイトの下層ページイメージ](../../../public/works/sushi-sub-pages.webp)
-
-## リンク
-
-[Figma](https://www.figma.com/design/Yri32R6sSSlupy0pCPfsbD/240903_SUSHI-WIZARDS_Competition?node-id=5-57916&t=TRgQLDyp2lZKKZUP-1)
