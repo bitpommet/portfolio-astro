@@ -104,16 +104,16 @@ h1 {
 
 h2 {
   font-size: var(--fs-xl);
-  margin-top: var(--sp-3);
+  margin-top: var(--sp-5);
 }
 
 h3 {
   font-size: var(--fs-lg);
-  margin-top: var(--sp-2);
+  margin-top: var(--sp-3);
 }
 
 section p {
-  margin-top: var(--sp-1);
+  margin-top: var(--sp-2);
 }
 
 .wrapper {
