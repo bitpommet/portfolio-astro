@@ -2,16 +2,14 @@
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import NavItem from "./NavItem.astro";
 
-const links = [
-  { href: "/works", text: "Works" },
-];
+const links = [{ href: "/works", text: "Works" }];
 ---
 
 <header class="header-menu">
   <a href="/" class="header-title">
-    <h1 class="site-title">
+    <span class="site-title h-site-title" aria-label="Autumn">
       {SITE_TITLE}
-    </h1>
+    </span>
     <span class="site-description">
       {SITE_DESCRIPTION}
     </span>
@@ -25,7 +23,7 @@ const links = [
   .header-menu {
     position: sticky;
     top: 0;
-    background-color: rgb(255 255 255 / .85);
+    background-color: rgb(255 255 255 / 0.85);
     border-bottom: solid 1px var(--color-bg);
     display: flex;
     justify-content: space-between;
@@ -42,18 +40,16 @@ const links = [
     display: flex;
     align-items: baseline;
     gap: var(--sp-2);
-    
+
     @media screen and (max-width: 540px) {
       flex-direction: column;
       gap: var(--sp-xs);
     }
   }
 
-  .site-title {
-    font-family: var(--ff-en);
+  .h-site-title {
     font-size: var(--fs-2xl);
     font-weight: 400;
-    color: var(--color-gray01);
     line-height: 1;
 
     &:hover {

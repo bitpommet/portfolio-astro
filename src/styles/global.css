@@ -136,4 +136,7 @@ section p {
   margin: auto;
 }
 
-
+.site-title {
+  font-family: var(--ff-en);
+  color: var(--color-gray01);
+}

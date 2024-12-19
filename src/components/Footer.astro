@@ -31,7 +31,9 @@ const slinks = [
   <ul class="social-links">
     {slinks.map((link) => <SocialLinks {...link} />)}
   </ul>
-  <p class="cr">&copy; 2024 {SITE_TITLE}</p>
+  <p class="cr">
+    &copy; 2024 <span class="site-title" aria-label="Autumn">{SITE_TITLE}</span>
+  </p>
 </footer>
 
 <style>
@@ -73,7 +75,6 @@ const slinks = [
     font-family: var(--ff-en);
     font-size: var(--fs-sm);
     color: var(--color-gray01);
-    letter-spacing: 0.02em;
     margin-top: var(--sp-3);
   }
 </style>
