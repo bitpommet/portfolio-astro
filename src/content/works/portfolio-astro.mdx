@@ -23,4 +23,9 @@ Figmaでデザインカンプを作りましたが、実装しながら調整し
 
 急いでいたこともあり1からの構築ではなく[Astro公式のスターターキット](https://github.com/withastro/astro/tree/main/examples/portfolio)を使いましたが、[Next.js×microCMSの本](https://amzn.asia/d/hmrhh4A)を少し読んでいたことであまり迷わず作ることができました。
 
-![ポートフォリオのパソコン版イメージ](../../../public/works/pf-pc.webp)
+import ImageWithCaption from "../../components/ImageWithCaption.astro";
+
+<ImageWithCaption
+  src="/works/pf-pc.webp"
+  alt="ポートフォリオサイトのパソコン版イメージ"
+/>
